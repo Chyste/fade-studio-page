@@ -1,0 +1,302 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #000; /* Fondo negro para más elegancia */
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.7); /* Transparente inicialmente */
+    transition: background 0.4s ease-in-out, padding 0.3s ease-in-out;
+    padding: 15px 20px;
+}
+
+.navbar.scrolled {
+    background: black; /* Cambia a fondo sólido al hacer scroll */
+    padding: 10px 20px;
+}
+
+/* Ajuste de tamaño del logo */
+.navbar-brand img {
+    height: 80px;
+    transition: height 0.3s ease-in-out;
+}
+
+.navbar.scrolled .navbar-brand img {
+    height: 60px; /* Reduce tamaño del logo al hacer scroll */
+}
+
+/* Links del navbar */
+.navbar-nav .nav-link {
+    color: white !important;
+    margin-right: 15px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efecto de subrayado degradado en hover */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #861adf, #ee9858);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón "Reserva tu hora" mejorado */
+.btn-reserva {
+    background: linear-gradient(45deg, #861adf, #ee9858);
+    color: white;
+    padding: 12px 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.btn-reserva:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Iconos de redes sociales */
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.social-buttons a {
+    font-size: 1.8rem;
+    color: #ee9858;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.social-buttons a:hover {
+    color: #861adf;
+    transform: scale(1.1);
+}
+
+
+/* Home con slider */
+.home-section {
+    position: relative;
+    height: 100vh; /* Se ajusta para ocupar todo el viewport */
+    overflow: hidden;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+/* Estilos para la galería */
+#galeria .carousel-item img {
+    max-height: 500px; /* Limita la altura de la imagen */
+    width: auto; /* Mantiene la proporción */
+    margin: auto; /* Centra la imagen */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px; /* Bordes redondeados para mejor estética */
+}
+
+/* Superposición oscura en las imágenes */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Contenedor centrado dentro del slider */
+.home-section .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+/* Botón grande "Agenda tu hora" con gradiente */
+.btn-agenda {
+    background: linear-gradient(45deg, #861adf, #ee9858);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.btn-agenda:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Título de bienvenida */
+.bienvenida {
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Secciones generales */
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.section-content {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+    color: #bbb;
+}
+
+/* Fondo de las secciones */
+#servicios, #ubicacion, #contacto, #reserva {
+    background-color: #111; /* Un gris oscuro elegante */
+}
+/* Secciones generales */
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.section-content {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+    color: #bbb;
+}
+
+/* Fondo de las secciones */
+#servicios, #ubicacion, #contacto, #reserva {
+    background-color: #111; /* Un gris oscuro elegante */
+}
+
+/* Estilos para la galería */
+#galeria .carousel-item img {
+    border-radius: 10px;
+    
+}
+
+/* Estilos para el formulario de contacto */
+#contacto .form-control {
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+}
+
+#contacto .btn-primary {
+    background: #861adf;
+    border: none;
+}
+
+#contacto .btn-primary:hover {
+    background: #ee9858;
+}
+
+/* Estilos para las opiniones */
+.review-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.stars {
+    color: #ffcc00;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    padding: 10px 0;
+}
+
+.footer p, .footer a {
+    color: white;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ee9858;
+}
+#map {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos para las tarjetas de servicios */
+.service-card {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Íconos en las tarjetas */
+.service-card i {
+    font-size: 3rem;
+    color: #ee9858;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #bbb;
+    font-size: 1rem;
+}
